@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:mvvm_provider_dio/views/home/home_screen.dart';
+import 'package:mvvm_provider_dio/views/userdetail/userdetail_screen.dart';
 
 class AppRouter {
 
@@ -12,5 +13,6 @@ class AppRouter {
   // Router Map
   static get routes => {
     home: (context) => HomeScreen(),
+    userdetail: (context) => UserDetailScreen(),
   };
 }

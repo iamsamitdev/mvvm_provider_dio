@@ -2,9 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:mvvm_provider_dio/providers/bottomnav_provider.dart';
+import 'package:mvvm_provider_dio/services/user_api_service.dart';
 import 'package:mvvm_provider_dio/views/bottomnav/map_screen.dart';
 import 'package:mvvm_provider_dio/views/bottomnav/product_screen.dart';
 import 'package:mvvm_provider_dio/views/bottomnav/user_screen.dart';
+import 'package:mvvm_provider_dio/views/home/custom_drawer.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,9 +26,17 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   @override
+  void initState() {
+    super.initState();
+    // Test Call API
+    UserApiService().getUser();
+  }
+
+  @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      drawer: Drawer(),
+      drawer: CustomDrawer(),
       appBar: AppBar(
         title: Consumer<BottomNavProvider>(
           builder: (context, provider, child){
