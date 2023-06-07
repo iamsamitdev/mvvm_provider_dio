@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mvvm_provider_dio/app_router.dart';
 import 'package:mvvm_provider_dio/providers/bottomnav_provider.dart';
+import 'package:mvvm_provider_dio/viewmodels/product_viewmodel.dart';
 import 'package:mvvm_provider_dio/viewmodels/user_viewmodel.dart';
 import 'package:provider/provider.dart';
 import 'package:logger/logger.dart';
@@ -27,6 +28,9 @@ class App extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => UserViewModel()
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ProductViewModel()
         ),
       ],
       child: MaterialApp(
