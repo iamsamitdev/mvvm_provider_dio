@@ -1,4 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:label="mvvm_provider_dio"
         android:name="${applicationName}"
@@ -29,5 +32,11 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <!-- Google Map -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDjn0Uytv_FSUwwpOUTVCvL4vKYU7Ev7VU"/>
+
     </application>
 </manifest>
